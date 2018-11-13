@@ -1,7 +1,8 @@
 import React from 'react'
+import Card from '../components/Card'
 
 const AppContainer = () => (
-    <div>Container</div>
+    <Card />
 )
 
 export default AppContainer
