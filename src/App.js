@@ -20,6 +20,14 @@ class App extends Component {
     .then(
       (result) => {
         console.log('result', result)
+        this.setState({
+          planetInfo: {
+            name: result.name,
+            population: result.population,
+            climate: result.climate,
+            terrain: result.terrain
+          }
+        })
       }
     )
   }
@@ -31,7 +39,9 @@ class App extends Component {
 
   render() {
     return (
-      <AppContainer />
+      <AppContainer 
+        planet={ this.state.planetInfo }
+      />
     );
   }
 }
