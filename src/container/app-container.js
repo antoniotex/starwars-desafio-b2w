@@ -6,7 +6,7 @@ import Button from '../components/button'
 const AppContainer = ({ planetInfo, nextPlanet }) => (
     <div>
         { planetInfo && <Card planetInfo={ planetInfo } /> }
-        <Button nextPlanet={ nextPlanet } />
+        { planetInfo && <Button nextPlanet={ nextPlanet } /> }
     </div>
 )
 

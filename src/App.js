@@ -20,13 +20,14 @@ class App extends Component {
     .then(res => res.json())
     .then(
       (result) => {
-        console.log('result', result)
+        console.log('result', result.residents)
         this.setState({
           planetInfo: {
             name: result.name,
             population: result.population,
             climate: result.climate,
-            terrain: result.terrain
+            terrain: result.terrain,
+            films: result.films
           }
         })
       }
