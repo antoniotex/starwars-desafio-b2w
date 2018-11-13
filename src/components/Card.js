@@ -2,7 +2,7 @@ import React from  'react'
 import PropTypes from 'prop-types'
 
 const Card = ({ planetInfo }) => (
-    <div>
+    <div className='card'>
         <h2>Planet Name: { planetInfo.name } </h2>
         <p>Population: { planetInfo.population } </p>
         <p>Climate: { planetInfo.climate } </p>

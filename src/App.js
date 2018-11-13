@@ -46,13 +46,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-      <div className="background" role="img"></div>
-        <AppContainer 
+        <AppContainer
         planetInfo={ this.state.planetInfo }
         nextPlanet={ () => this.nextPlanet() }
         />
-      </div>
     );
   }
 }
