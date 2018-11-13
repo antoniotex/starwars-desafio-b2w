@@ -28,6 +28,7 @@ class App extends Component {
             terrain: result.terrain
           }
         })
+        console.log(this.state.planetInfo)
       }
     )
   }
@@ -40,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <AppContainer 
-        planet={ this.state.planetInfo }
+      planetInfo={ this.state.planetInfo }
       />
     );
   }

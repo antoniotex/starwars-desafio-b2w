@@ -1,12 +1,17 @@
 import React from  'react'
+import PropTypes from 'prop-types'
 
-const Card = () => (
+const Card = ({ planetInfo }) => (
     <div>
-        <h2>Planet Name: </h2>
-        <p>Population: </p>
-        <p>Climate: </p>
-        <p>Terrains: </p>
+        <h2>Planet Name: { planetInfo.name } </h2>
+        <p>Population: { planetInfo.population } </p>
+        <p>Climate: { planetInfo.climate } </p>
+        <p>Terrains: { planetInfo.terrain } </p>
     </div>
 )
+
+Card.propTypes = {
+    planetInfo: PropTypes.object
+}
 
 export default Card
