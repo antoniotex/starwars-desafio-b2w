@@ -8,6 +8,11 @@ class App extends Component {
     this.state = {}
   }
 
+  getRandomNumber(num){
+    let number = Math.floor(Math.random() * num)
+    console.log(number);
+  }
+
   render() {
     return (
       <AppContainer />
