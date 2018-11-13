@@ -15,7 +15,8 @@ class App extends Component {
   }
 
   nextPlanet(){
-    fetch(`https://swapi.co/api/planets/40/`)
+    let randomNumber = this.getRandomNumber(61)
+    fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     .then(res => res.json())
     .then(
       (result) => {
@@ -34,8 +35,7 @@ class App extends Component {
   }
 
   getRandomNumber(num){
-    let number = Math.floor(Math.random() * num)
-    console.log(number);
+    return Math.floor(Math.random() * num)
   }
 
   render() {
