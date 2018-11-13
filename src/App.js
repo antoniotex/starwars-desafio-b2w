@@ -29,13 +29,16 @@ class App extends Component {
             terrain: result.terrain
           }
         })
-        console.log(this.state.planetInfo)
       }
     )
   }
 
   getRandomNumber(num){
-    return Math.floor(Math.random() * num)
+    let number = Math.floor(Math.random() * num)
+    if(number === 0)
+      this.getRandomNumber(num)
+    else
+      return number
   }
 
   render() {
