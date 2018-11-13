@@ -1,5 +1,7 @@
 import React from 'react'
 
-const AppContainer = () => {
+const AppContainer = () => (
     <div>Container</div>
-}
+)
+
+export default AppContainer
