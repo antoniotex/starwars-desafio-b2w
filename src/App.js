@@ -5,7 +5,23 @@ import './assets/styles/scss/app.scss';
 class App extends Component {
   constructor(){
     super()
-    this.state = {}
+    this.state = {
+      planetInfo: null
+    }
+  }
+
+  componentWillMount(){
+    this.nextPlanet()
+  }
+
+  nextPlanet(){
+    fetch(`https://swapi.co/api/planets/40/`)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log('result', result)
+      }
+    )
   }
 
   getRandomNumber(num){
