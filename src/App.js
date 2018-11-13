@@ -20,7 +20,9 @@ class App extends Component {
     .then(res => res.json())
     .then(
       (result) => {
-        console.log('result', result.residents)
+        if(result.name === 'unknown')
+          this.nextPlanet();
+
         this.setState({
           planetInfo: {
             name: result.name,
@@ -44,10 +46,13 @@ class App extends Component {
 
   render() {
     return (
-      <AppContainer 
-      planetInfo={ this.state.planetInfo }
-      nextPlanet={ () => this.nextPlanet() }
-      />
+      <div className="App">
+      <div className="background" role="img"></div>
+        <AppContainer 
+        planetInfo={ this.state.planetInfo }
+        nextPlanet={ () => this.nextPlanet() }
+        />
+      </div>
     );
   }
 }
