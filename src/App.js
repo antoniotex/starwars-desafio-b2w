@@ -45,6 +45,7 @@ class App extends Component {
     return (
       <AppContainer 
       planetInfo={ this.state.planetInfo }
+      nextPlanet={ () => this.nextPlanet() }
       />
     );
   }
