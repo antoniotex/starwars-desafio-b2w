@@ -22,10 +22,11 @@ class App extends Component {
       (result) => {
         if(result.name === 'unknown')
           this.nextPlanet();
-
+        console.log(result)
         this.setState({
           planetInfo: {
             name: result.name,
+            diameter: result.diameter,
             population: result.population,
             climate: result.climate,
             terrain: result.terrain,
