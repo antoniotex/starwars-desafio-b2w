@@ -4,7 +4,7 @@ import '../assets/styles/scss/app.scss';
 import Card from '../components/card'
 import Button from '../components/button'
 
-const AppContainer = ({ planetInfo, nextPlanet, getFilms }) => (
+const AppContainer = ({ planetInfo, nextPlanet, getFilms, featuredFilms }) => (
     <div className="app-container">
         { planetInfo && <Card planetInfo={ planetInfo } getFilms={ getFilms } /> }
         { planetInfo && <Button nextPlanet={ nextPlanet } /> }
@@ -14,7 +14,8 @@ const AppContainer = ({ planetInfo, nextPlanet, getFilms }) => (
 AppContainer.propTypes = {
     planetInfo: PropTypes.object,
     nextPlanet: PropTypes.func,
-    getFilms: PropTypes.func
+    getFilms: PropTypes.func,
+    featuredFilms: PropTypes.array
 }
 
 export default AppContainer

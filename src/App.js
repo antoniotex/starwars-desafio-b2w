@@ -6,12 +6,19 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      planetInfo: null
+      planetInfo: null,
+      featuredFilms: []
     }
   }
 
   componentWillMount(){
     this.nextPlanet()
+  }
+
+  componentWillUnmount(){
+    this.setState({
+      featuredFilms: []
+    })
   }
 
   nextPlanet(){
@@ -30,8 +37,7 @@ class App extends Component {
             climate: result.climate,
             terrain: result.terrain,
             films: result.films
-          },
-          films: []
+          }
         })
       }
     )
@@ -43,7 +49,12 @@ class App extends Component {
       .then(res => res.json())
       .then(
         (result) => {
-          console.log('film result', result)
+          this.setState({
+            films: {
+              title: result.title,
+              releaseDate: result.release_date
+            }
+          })
         }
       )
       return 0;
@@ -64,6 +75,7 @@ class App extends Component {
         planetInfo={ this.state.planetInfo }
         nextPlanet={ () => this.nextPlanet() }
         getFilms={ () => this.getFilms() }
+        featuredFilms={ this.state.featuredFilms }
         />
     );
   }
