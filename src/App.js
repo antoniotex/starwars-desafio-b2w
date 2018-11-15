@@ -46,6 +46,7 @@ class App extends Component {
           console.log('film result', result)
         }
       )
+      return 0;
     }))
   }
 
