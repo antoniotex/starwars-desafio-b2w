@@ -1,18 +1,19 @@
 @import 'reset';
 
 .card {
-  border: 1px solid white;
+  border: 3px solid blue;
   color: yellow;
   width: 370px;
   height: 50%;
-  background-color: rgba($color: blue, $alpha: .4)
+  background-color: rgba($color: blue, $alpha: .6);
+  border-radius: 30px 30px 15px 15px;
 }
 
 .card-name {
   display: flex;
   justify-content: center;
   padding: 5px 0;
-  border: 1px solid white;
+  border-radius: 25px 25px 0 0;
   background-color: blue;
   h1 {
     font-size: 40px;
@@ -21,11 +22,20 @@
 }
 
 .card-info{
+  padding: 10px;
   height: 70%;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-direction: column;
-  justify-content: space-around
+  justify-content: space-around;
+  p{
+    font-size: 20px;
+  }
+}
+
+.card-films{
+  display: flex;
+  justify-content: center;
 }
 
 .app-container { 

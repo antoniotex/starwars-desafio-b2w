@@ -31,7 +31,8 @@ class App extends Component {
             climate: result.climate,
             terrain: result.terrain,
             films: result.films
-          }
+          },
+          films: []
         })
       }
     )

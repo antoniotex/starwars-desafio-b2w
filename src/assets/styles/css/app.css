@@ -36,28 +36,31 @@ table {
   border-spacing: 0; }
 
 .card {
-  border: 1px solid white;
+  border: 3px solid blue;
   color: yellow;
   width: 370px;
   height: 50%;
-  background-color: rgba(0, 0, 255, 0.4); }
+  background-color: rgba(0, 0, 255, 0.4);
+  border-radius: 30px 30px 15px 15px; }
 
 .card-name {
   display: flex;
   justify-content: center;
   padding: 5px 0;
-  border: 1px solid white;
+  border-radius: 25px 25px 0 0;
   background-color: blue; }
   .card-name h1 {
     font-size: 40px;
     color: #fff; }
 
 .card-info {
+  padding: 10px;
   height: 70%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
+  .card-info p {
+    font-size: 20px; }
 
 .app-container {
   display: flex;

@@ -11,6 +11,8 @@ const Card = ({ planetInfo }) => (
             <p>Population: { planetInfo.population } </p>
             <p>Climate: { planetInfo.climate } </p>
             <p>Terrains: { planetInfo.terrain } </p>
+        </div>
+        <div className='card-films'>
             { planetInfo.films != null && <p>Featured in { planetInfo.films.length } { planetInfo.films.length ===1 ? 'film' : 'films' }</p> }
         </div>
     </div>
