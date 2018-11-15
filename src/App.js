@@ -22,7 +22,6 @@ class App extends Component {
       (result) => {
         if(result.name === 'unknown')
           this.nextPlanet();
-        console.log(result)
         this.setState({
           planetInfo: {
             name: result.name,
@@ -38,6 +37,18 @@ class App extends Component {
     )
   }
 
+  getFilms(){
+    this.state.planetInfo.films.map((film => {
+      fetch(film)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          console.log('film result', result)
+        }
+      )
+    }))
+  }
+
   getRandomNumber(num){
     let number = Math.floor(Math.random() * num)
     if(number === 0)
@@ -51,6 +62,7 @@ class App extends Component {
         <AppContainer
         planetInfo={ this.state.planetInfo }
         nextPlanet={ () => this.nextPlanet() }
+        getFilms={ () => this.getFilms() }
         />
     );
   }
