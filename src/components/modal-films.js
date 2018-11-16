@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ModalFilms = () => (
-    <div>Modal films works</div>
+const ModalFilms = ({ featuredFilms }) => (
+    <div>
+        <p>{ featuredFilms[0].title }</p>
+        <p>{ featuredFilms[0].releaseDate }</p>
+    </div>
 )
 
 ModalFilms.propTypes = {

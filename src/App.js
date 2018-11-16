@@ -21,7 +21,7 @@ class App extends Component {
     })
   }
 
-  nextPlanet(){
+  nextPlanet = () => {
     let randomNumber = this.getRandomNumber(61)
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     .then(res => res.json())
@@ -44,19 +44,18 @@ class App extends Component {
   }
 
   getFilms(){
+    console.log('entrei', this.state.featuredFilms)
     this.state.planetInfo.films.map((film => {
       fetch(film)
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
-            films: {
-              title: result.title,
-              releaseDate: result.release_date
-            }
+            featuredFilms: [...this.state.featuredFilms, result]
           })
         }
       )
+      console.log('saindo', this.state.featuredFilms)
       return 0;
     }))
   }
