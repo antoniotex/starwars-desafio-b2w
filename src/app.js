@@ -7,18 +7,13 @@ class App extends Component {
     super()
     this.state = {
       planetInfo: null,
-      featuredFilms: []
+      featuredFilms: [],
+      showModalFilms: false
     }
   }
 
   componentWillMount(){
     this.nextPlanet()
-  }
-
-  componentWillUnmount(){
-    this.setState({
-      featuredFilms: []
-    })
   }
 
   nextPlanet = () => {
@@ -79,6 +74,7 @@ class App extends Component {
         nextPlanet={ () => this.nextPlanet() }
         getFilms={ () => this.getFilms() }
         featuredFilms={ this.state.featuredFilms }
+        showModalFilms={ this.state.showModalFilms }
         />
     );
   }
