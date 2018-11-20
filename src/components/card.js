@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Card = ({ planetInfo, getFilms }) => (
     <div className='card'>
         <div className="card-name">  
-            <h1>{ planetInfo.name }: teste </h1>
+            <h1>{ planetInfo.name }</h1>
         </div>
         <div className='card-info'>
             <p>Diameter: { planetInfo.diameter }</p>

@@ -27,7 +27,8 @@ class App extends Component {
 
   nextPlanet(){
     let randomNumber = this.getRandomNumber(61)
-    fetch(`https://swapi.co/api/planets/${randomNumber}/`)
+    // fetch(`https://swapi.co/api/planets/${randomNumber}/`)
+    fetch(`https://swapi.co/api/planets/1/`)
     .then(res => res.json())
     .then(
       (result) => {
