@@ -13,7 +13,7 @@ const Card = ({ planetInfo, getFilms }) => (
             <p>Terrains: { planetInfo.terrain } </p>
         </div>
         <div className='card-films'>
-            { planetInfo.films != null && <p onClick={ getFilms }>Featured in { planetInfo.films.length } { planetInfo.films.length === 1 ? 'film' : 'films' }</p> }
+            { planetInfo.films != null && <p onClick={ getFilms }>Feature in { planetInfo.films.length } { planetInfo.films.length === 1 ? 'film' : 'films' }</p> }
         </div>
     </div>
 )

@@ -16,7 +16,15 @@ class App extends Component {
     this.nextPlanet()
   }
 
-  nextPlanet = () => {
+  handleOpenModalFilms(){
+    this.setState({ showModalFilms: true })
+  }
+
+  handleCloseModal(){
+    this.setState({ showModalFilms: false })
+  }
+
+  nextPlanet(){
     let randomNumber = this.getRandomNumber(61)
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     .then(res => res.json())
@@ -40,6 +48,7 @@ class App extends Component {
   }
 
   getFilms(){
+    this.handleOpenModalFilms()
     this.setState({
       featuredFilms: []
     })
@@ -75,6 +84,7 @@ class App extends Component {
         getFilms={ () => this.getFilms() }
         featuredFilms={ this.state.featuredFilms }
         showModalFilms={ this.state.showModalFilms }
+        handleCloseModal={ () => this.handleCloseModal() }
         />
     );
   }
