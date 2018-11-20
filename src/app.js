@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppContainer from './container/app-container'
 import './assets/styles/scss/app.scss';
+import Background from './components/background'
 
 class App extends Component {
   constructor(){
@@ -78,14 +79,17 @@ class App extends Component {
 
   render() {
     return (
-        <AppContainer
-        planetInfo={ this.state.planetInfo }
-        nextPlanet={ () => this.nextPlanet() }
-        getFilms={ () => this.getFilms() }
-        featuredFilms={ this.state.featuredFilms }
-        showModalFilms={ this.state.showModalFilms }
-        handleCloseModal={ () => this.handleCloseModal() }
-        />
+        <div className="App">
+          <Background />
+          <AppContainer
+            planetInfo={ this.state.planetInfo }
+            nextPlanet={ () => this.nextPlanet() }
+            getFilms={ () => this.getFilms() }
+            featuredFilms={ this.state.featuredFilms }
+            showModalFilms={ this.state.showModalFilms }
+            handleCloseModal={ () => this.handleCloseModal() }
+          />
+        </div>
     );
   }
 }
