@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'button';
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 
 .loading{
   // border: 1px solid red;
@@ -105,6 +106,7 @@
 }
 
 .card-name {
+  font-family: 'Black Han Sans', sans-serif;
   display: flex;
   justify-content: center;
   padding: 5px 0;
