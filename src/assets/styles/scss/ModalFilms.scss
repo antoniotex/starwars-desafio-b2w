@@ -1,0 +1,49 @@
+@import 'variables';
+
+.modalfilm-content{
+    display: flex;
+    width: 410px;
+    height: 50vh;
+    position: relative;
+    border: 6px solid $red;
+    background-color: $yellow;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+  }
+
+  .name{
+      width: 90%;
+      p{
+          font-size: 1.3em;
+          margin: 1.1em 0;
+          font-weight: bold;
+          font-family: 'Chakra Petch', sans-serif;
+      }
+  }
+
+  .close{
+      width: 10%;
+      p {
+        color: $red;
+        font-weight: bold;
+        text-align: right;
+        font-size: 60px;
+        cursor: pointer;
+        padding: 0;
+      }
+  }
+  
+  .modalfilm-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 3;
+  }

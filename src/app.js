@@ -27,9 +27,12 @@ class App extends Component {
     this.setState({ showModalFilms: false })
   }
 
-  nextPlanet = () => {
+  nextPlanet(){
     this.setState({ loading: true })
     let randomNumber = this.getRandomNumber(61)
+    console.log('chegando', randomNumber)
+    if(randomNumber === undefined)
+      this.nextPlanet()
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     .then(res => res.json())
     .then(
@@ -75,11 +78,15 @@ class App extends Component {
   }
 
   getRandomNumber(num){
-    let number = Math.floor(Math.random() * num)
-    if(number === 0 || number === undefined)
+    let number = Math.floor(Math.random() * num + 1)
+    if(number === 0 || number === undefined){
+      console.log('Caindo no IF', number);
       this.getRandomNumber(num)
-    else
+    }else{
+      console.log('Enviando', number);
       return number
+    }
+      
   }
 
   render() {

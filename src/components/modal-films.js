@@ -4,13 +4,14 @@ import Modal from 'react-modal'
 
 const ModalFilms = ({ featuredFilms, showModalFilms, handleCloseModal }) => (
     <Modal className="modalfilm-content" isOpen={ showModalFilms } contentLabel={ 'Featured Films List' } onRequestClose={ handleCloseModal } overlayClassName="modalfilm-overlay" >
-        <div>
-            <p onClick={ handleCloseModal } >&times;</p>
-            <h1>Film</h1>
+            <div className='name'>
             { featuredFilms.map((film, index) => (
-                <h5 key={ index } >{ film.title }, { film.release_date.slice(0, 4) }</h5>
+                <p key={ index } >{ film.title }, { film.release_date.slice(0, 4) }</p>
             )) }
-        </div>
+            </div>
+            <div className='close' ><p onClick={ handleCloseModal } >&times;</p></div>
+            
+         
     </Modal>
 )
 

@@ -9,7 +9,7 @@ const AppContainer = ({ planetInfo, nextPlanet, getFilms, featuredFilms, showMod
     <div className="app-container">
         { planetInfo && <Card planetInfo={ planetInfo } getFilms={ getFilms } /> }
         { planetInfo && <Button nextPlanet={ nextPlanet } /> }
-        { (featuredFilms.length > 0) && <ModalFilms featuredFilms={ featuredFilms } showModalFilms={ showModalFilms } handleCloseModal={ handleCloseModal } /> }
+        <ModalFilms featuredFilms={ featuredFilms } showModalFilms={ showModalFilms } handleCloseModal={ handleCloseModal } />
     </div>
 )
 

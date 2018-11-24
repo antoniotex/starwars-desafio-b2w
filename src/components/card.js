@@ -6,6 +6,7 @@ const Card = ({ planetInfo, getFilms }) => (
         <div className="card-name">  
             <h1>{ planetInfo.name }</h1>
         </div>
+        {/* <div className='lds-hourglass' style={ { border: '1px solid red', margin: 'auto' } } ></div> */}
         <div className='card-info'>
             <p>Diameter: { planetInfo.diameter }</p>
             <p>Population: { planetInfo.population } </p>
