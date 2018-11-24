@@ -2,6 +2,41 @@
 @import 'button';
 @import 'variables';
 
+.loading{
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative; 
+  height: 100vh;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .app-container{
   display: flex;
   flex-direction: column;
@@ -47,11 +82,12 @@
 }
 
 .card {
-  border: 3px solid $yellow;
-  color: $red;
+  border: 7px solid $yellow;
+  // color: $red;
+  // $darken( $red, 10% );
   width: 400px;
   height: 380px;
-  background-color: rgba($yellow, $alpha: .2);
+  background-color: rgba($yellow, .8);
   border-radius: 30px 30px 15px 15px;
   z-index: 1;
   overflow: auto;
@@ -65,9 +101,9 @@
   display: flex;
   justify-content: center;
   padding: 5px 0;
-  border-radius: 25px 25px 0 0;
-  // background-color: $yellow;
-  background-color: rgba($yellow, $alpha: .6);
+  border-radius: 20px 20px 0 0;
+  background-color: $yellow;
+  // background-color: rgba($yellow, .9);
   h1 {
     font-size: 40px;
     color: $red;

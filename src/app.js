@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppContainer from './container/app-container'
 import './assets/styles/scss/app.scss';
 import Background from './components/background'
+import Loading from './components/loading'
 
 class App extends Component {
   constructor(){
@@ -9,7 +10,8 @@ class App extends Component {
     this.state = {
       planetInfo: null,
       featuredFilms: [],
-      showModalFilms: false
+      showModalFilms: false,
+      loading: false
     }
   }
 
@@ -26,6 +28,7 @@ class App extends Component {
   }
 
   nextPlanet = () => {
+    this.setState({ loading: true })
     let randomNumber = this.getRandomNumber(61)
     // fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
@@ -45,6 +48,7 @@ class App extends Component {
           },
           featuredFilms: []
         })
+        this.setState({ loading: false })
       }
     )
   }
@@ -80,14 +84,15 @@ class App extends Component {
     return (
         <div className="App">
           <Background />
-          <AppContainer
+          { this.state.loading && <Loading /> }
+          { !this.state.loading && <AppContainer
             planetInfo={ this.state.planetInfo }
             nextPlanet={ () => this.nextPlanet() }
             getFilms={ () => this.getFilms() }
             featuredFilms={ this.state.featuredFilms }
             showModalFilms={ this.state.showModalFilms }
             handleCloseModal={ () => this.handleCloseModal() }
-          />
+          /> }
         </div>
     );
   }
