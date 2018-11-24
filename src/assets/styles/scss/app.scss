@@ -16,9 +16,10 @@
 .lds-hourglass {
   display: inline-block;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 210px;
+  height: 210px;
 }
+
 .lds-hourglass:after {
   content: " ";
   display: block;
@@ -27,10 +28,11 @@
   height: 0;
   margin: 6px;
   box-sizing: border-box;
-  border: 70px solid #fff;
+  border: 100px solid #fff;
   border-color: $yellow transparent $yellow transparent;
   animation: lds-hourglass 1.2s infinite;
 }
+
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);
@@ -45,40 +47,23 @@
   }
 }
 
-/* Buzz */
-@-webkit-keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
+/* Pulse */
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.0);
   }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
+  75% {
+    transform: scale(1.1);
   }
 }
-@keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-}
-.hvr-buzz {
+.hvr-pulse {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-animation-name: hvr-buzz;
-  animation-name: hvr-buzz;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
-  -webkit-animation-timing-function: linear;
+  animation-name: hvr-pulse;
+  animation-duration: 1s;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
@@ -179,7 +164,7 @@
 .card-films{
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: flex;
   justify-content: center;
 }
@@ -193,19 +178,6 @@
   from {background-position:0 0;}
   to {background-position:-10000px 5000px;}
 }
-@-webkit-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-
 
 .stars, .twinkling {
   display: block;

@@ -15,10 +15,10 @@ const Card = ({ planetInfo, getFilms }) => (
         <div className='card-films'>
             { planetInfo.films != null && 
             <p 
-                title='Click to see featured films' 
-                className={ `${planetInfo.films.length > 0 ? 'hvr-buzz' : 'none'}` } 
-                onClick={ getFilms }>Feature in { planetInfo.films.length } { planetInfo.films.length === 1 ? 'film' : 'films' }
-                </p> }
+                title={ `${planetInfo.films.length > 0 ? 'Click to see featured films' : 'No films'}` } 
+                className={ `${planetInfo.films.length > 0 ? 'hvr-pulse' : 'none'}` } 
+                onClick={ getFilms }>Featured in { planetInfo.films.length } { planetInfo.films.length === 1 ? 'film' : 'films' }
+            </p> }
         </div>
     </div>
 )
