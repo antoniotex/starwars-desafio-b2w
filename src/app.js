@@ -76,7 +76,7 @@ class App extends Component {
 
   getRandomNumber(num){
     let number = Math.floor(Math.random() * num)
-    if(number === 0)
+    if(number === 0 || number === undefined)
       this.getRandomNumber(num)
     else
       return number

@@ -1,7 +1,7 @@
 <h1 align='center'>Desafio Frontend B2W Digital</h1>
 
 ## Descrição do Projeto
-Desafio para a vaga de Desenvolvedor Frontend na [B2W Digital](). O teste consistia em desenvolver uma aplicação que pegue aleatoriamente um planeta da franquia e mostre informações do mesmo como População, Clima e Tipo de Terreno. Junto a essas informações, a aplicação também deve informar em quantos filmes da franquia houve aparições daquele planeta.
+Desafio para a vaga de Desenvolvedor Frontend na [B2W Digital](). O desafio consistia em desenvolver uma aplicação que pegue aleatoriamente um planeta da franquia e mostre informações do mesmo como População, Clima e Tipo de Terreno. Junto a essas informações, a aplicação também deve informar em quantos filmes da franquia houve aparições daquele planeta.
 
 ## Índice
 
