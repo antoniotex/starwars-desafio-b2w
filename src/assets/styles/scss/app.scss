@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'button';
 @import 'variables';
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Chakra+Petch');
 
 .loading{
   // border: 1px solid red;
@@ -43,6 +43,43 @@
   100% {
     transform: rotate(1800deg);
   }
+}
+
+/* Buzz */
+@-webkit-keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+.hvr-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-animation-name: hvr-buzz;
+  animation-name: hvr-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .app-container{
@@ -120,6 +157,8 @@
 }
 
 .card-info{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
   padding: 10px;
   height: 70%;
   // border: 1px solid red;
@@ -132,6 +171,9 @@
 }
 
 .card-films{
+  cursor: pointer;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.5em;
   display: flex;
   justify-content: center;
 }
