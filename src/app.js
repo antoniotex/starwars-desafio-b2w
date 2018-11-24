@@ -30,7 +30,6 @@ class App extends Component {
   nextPlanet = () => {
     this.setState({ loading: true })
     let randomNumber = this.getRandomNumber(61)
-    // fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
     .then(res => res.json())
     .then(
@@ -46,9 +45,12 @@ class App extends Component {
             terrain: result.terrain,
             films: result.films
           },
-          featuredFilms: []
+          featuredFilms: [],
+          loading: false
         })
-        this.setState({ loading: false })
+      },
+      (error) => {
+        console.log('', error);
       }
     )
   }

@@ -151,8 +151,14 @@
   background-color: $yellow;
   // background-color: rgba($yellow, .9);
   h1 {
-    font-size: 40px;
+    font-size: 2.3em;
     color: $red;
+  }
+
+  @media (max-width: 370px){
+    h1 {
+      font-size: 2em;
+    }
   }
 }
 
