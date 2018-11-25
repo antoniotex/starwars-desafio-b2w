@@ -31,7 +31,6 @@ class App extends Component {
   nextPlanet(){
     this.setState({ loading: true })
     let randomNumber = this.getRandomNumber(61)
-    console.log('chegando', randomNumber)
     if(randomNumber === undefined)
       this.nextPlanet()
     fetch(`https://swapi.co/api/planets/${randomNumber}/`)
