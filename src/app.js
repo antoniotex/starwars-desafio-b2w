@@ -11,7 +11,8 @@ class App extends Component {
       planetInfo: null,
       featuredFilms: [],
       showModalFilms: false,
-      loading: false
+      loading: false,
+      loadingModal: false
     }
   }
 
@@ -61,7 +62,8 @@ class App extends Component {
   getFilms(){
     this.handleOpenModalFilms()
     this.setState({
-      featuredFilms: []
+      featuredFilms: [],
+      loadingModal: true
     })
     this.state.planetInfo.films.map((film => {
       fetch(film)
@@ -69,7 +71,8 @@ class App extends Component {
       .then(
         (result) => {
           this.setState({
-            featuredFilms: [...this.state.featuredFilms, result]
+            featuredFilms: [...this.state.featuredFilms, result],
+            loadingModal: false
           })
         }
       )
@@ -101,6 +104,7 @@ class App extends Component {
             featuredFilms={ this.state.featuredFilms }
             showModalFilms={ this.state.showModalFilms }
             handleCloseModal={ () => this.handleCloseModal() }
+            loadingModal={ this.state.loadingModal }
           /> }
         </div>
     );

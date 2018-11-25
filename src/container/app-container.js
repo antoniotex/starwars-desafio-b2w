@@ -5,11 +5,11 @@ import Card from '../components/card'
 import Button from '../components/button'
 import ModalFilms from '../components/modal-films'
 
-const AppContainer = ({ planetInfo, nextPlanet, getFilms, featuredFilms, showModalFilms, handleCloseModal }) => (
+const AppContainer = ({ planetInfo, nextPlanet, getFilms, featuredFilms, showModalFilms, handleCloseModal, loadingModal }) => (
     <div className="app-container">
         { planetInfo && <Card planetInfo={ planetInfo } getFilms={ getFilms } /> }
         { planetInfo && <Button nextPlanet={ nextPlanet } /> }
-        <ModalFilms featuredFilms={ featuredFilms } showModalFilms={ showModalFilms } handleCloseModal={ handleCloseModal } />
+        <ModalFilms loadingModal={ loadingModal } featuredFilms={ featuredFilms } showModalFilms={ showModalFilms } handleCloseModal={ handleCloseModal } />
     </div>
 )
 
@@ -19,7 +19,8 @@ AppContainer.propTypes = {
     getFilms: PropTypes.func,
     featuredFilms: PropTypes.array,
     showModalFilms: PropTypes.bool,
-    handleCloseModal: PropTypes.func
+    handleCloseModal: PropTypes.func,
+    loadingModal: PropTypes.bool
 }
 
 export default AppContainer

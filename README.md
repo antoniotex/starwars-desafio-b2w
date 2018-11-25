@@ -26,13 +26,24 @@ Os demais participantes devem adivinhar q ual é o diâmetro, população, clima
 Para executar o projeto em modo de desenvolvimento, você deverá ter a última versão estável do [Node.js]() instalado em sua máquina.
 
 Clone o repositório digitando no seu terminal
-`git clone https://github.com/antoniotex/starwars-desafio-b2w.git`
+```
+git clone https://github.com/antoniotex/starwars-desafio-b2w.git
+```
 
 Após terminar o download, instale as depêndencias
-`cd starwars-desafio-b2w`
-`npm install`
+```
+cd starwars-desafio-b2w
+npm install
+```
 
 Quando terminar de instalar as depêndencias, inicie o servidor de desenvolvimento
-`npm start`
+```
+npm start
+```
+Acesse o endereço abaixo no seu navegador para visualizar
+```
+http://localhost:3000/
+```
+
 
 
