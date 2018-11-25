@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watch",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/assets/styles/scss:src/assets/styles/css"
   },

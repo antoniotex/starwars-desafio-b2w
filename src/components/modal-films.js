@@ -10,11 +10,11 @@ const ModalFilms = ({ featuredFilms, showModalFilms, handleCloseModal, loadingMo
      onRequestClose={ handleCloseModal } 
      overlayClassName="modalfilm-overlay">
         { loadingModal && <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div> }
-        <div className='name'>
+        { featuredFilms && <div className='name'>
             { featuredFilms.map((film, index) => (
                 <p key={ index } >{ film.title }, { film.release_date.slice(0, 4) }</p>
             )) }
-        </div>
+        </div> }
         <div className='close' ><p onClick={ handleCloseModal } >&times;</p></div>                     
     </Modal>
 )

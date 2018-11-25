@@ -82,14 +82,10 @@ class App extends Component {
 
   getRandomNumber(num){
     let number = Math.floor(Math.random() * num + 1)
-    if(number === 0 || number === undefined){
-      console.log('Caindo no IF', number);
+    if(number === 0 || number === undefined)
       this.getRandomNumber(num)
-    }else{
-      console.log('Enviando', number);
+    else
       return number
-    }
-      
   }
 
   render() {

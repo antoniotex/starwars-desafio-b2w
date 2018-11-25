@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
+import AppContainer from './container/app-container'
 
 describe('App renders without crashing', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
+  });
+})
+
+describe('AppContainer renders without crashing', () => {
+  test('renders without crashing', () => {
+    const div = document.createElement('div')
+    ReactDOM.render(<AppContainer />, div)
+    ReactDOM.unmountComponentAtNode(div)
   });
 })
 
