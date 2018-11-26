@@ -20,20 +20,29 @@ class App extends Component {
     this.nextPlanet()
   }
 
+  /**
+   * Abre modal para exibir lista de filmes
+   */
   handleOpenModalFilms(){
     this.setState({ showModalFilms: true })
   }
 
+  /**
+   * Feche modal de exibir filmes
+   */
   handleCloseModal(){
     this.setState({ showModalFilms: false })
   }
 
+  /**
+   * Consulta a API e trás informações de acordo com o id passado
+   */
   nextPlanet(){
     this.setState({ loading: true })
-    let randomNumber = this.getRandomNumber(61)
-    if(randomNumber === undefined)
+    let id = this.getRandomNumber(61)
+    if(id === undefined)
       this.nextPlanet()
-    fetch(`https://swapi.co/api/planets/${randomNumber}/`)
+    fetch(`https://swapi.co/api/planets/${id}/`)
     .then(res => res.json())
     .then(
       (result) => {
@@ -58,6 +67,9 @@ class App extends Component {
     )
   }
 
+  /**
+   * Consulta a API e preenche array de filmes de acordo com os id's passados por parâmetro
+   */
   getFilms(){
     if(!this.state.planetInfo.films.length){
       return
@@ -82,6 +94,10 @@ class App extends Component {
     }))
   }
 
+  /**
+   * Recebe um numero limite e retorna numero aleatorio dntro desse limite
+   * @param {*} num - Número limite
+   */
   getRandomNumber(num){
     let number = Math.floor(Math.random() * num + 1)
     if(number === 0 || number === undefined)
