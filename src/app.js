@@ -46,8 +46,10 @@ class App extends Component {
     .then(res => res.json())
     .then(
       (result) => {
-        if(result.name === 'unknown')
-          this.nextPlanet();
+        if(result.name === 'unknown'){
+          this.nextPlanet()
+          return
+        }
         this.setState({
           planetInfo: {
             name: result.name,
