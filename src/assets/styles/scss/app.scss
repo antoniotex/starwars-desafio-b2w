@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'button';
 @import 'variables';
-@import 'ModalFilms';
+@import 'modal-films';
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Chakra+Petch');
 
 .loading{
@@ -80,8 +80,6 @@
 
 .card {
   border: 7px solid $yellow;
-  // color: $red;
-  // $darken( $red, 10% );
   width: 400px;
   height: 380px;
   background-color: rgba($yellow, .8);
@@ -89,8 +87,8 @@
   z-index: 1;
   overflow: auto;
 
-  @media (max-width: 600px){
-    width: 95%;
+  @media (max-width: 550px){
+    width: 90%;
   }
 }
 
@@ -101,7 +99,6 @@
   padding: 5px 0;
   border-radius: 20px 20px 0 0;
   background-color: $yellow;
-  // background-color: rgba($yellow, .9);
   h1 {
     font-size: 2.3em;
     color: $red;
@@ -119,7 +116,6 @@
   font-weight: bold;
   padding: 10px;
   height: 70%;
-  // border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

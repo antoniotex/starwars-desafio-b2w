@@ -5,7 +5,7 @@ Desafio para a vaga de Desenvolvedor Frontend na [B2W Digital](https://ri.b2w.di
 
 ## Instruções
 O apresentador do jogo clica no botão Next e informa qual é o planeta da vez.
-Os demais participantes devem adivinhar qual é o diâmetro, população, clima, tipo de terreno e em quantos filmes aquele planeta apareceu. Para ficar mais emocionante, o apresentador tem a opção de clicar no texto que indica a quantidade de filmes e ver os respectivos filmes e o seu ano de lançamento.
+Os demais participantes devem acertar qual é o diâmetro, população, clima, tipo de terreno e em quantos filmes aquele planeta apareceu. Para ficar mais emocionante, o apresentador tem a opção de clicar no texto que indica a quantidade de filmes e ver os respectivos filmes e o seu ano de lançamento.
 
 ## Tecnologias
 + Javascript
@@ -29,7 +29,7 @@ Clone o repositório digitando no seu terminal
 git clone https://github.com/antoniotex/starwars-desafio-b2w.git
 ```
 
-Após terminar o download, instale as depêndencias
+Após terminar o download, acesse a pasta e instale as depêndencias
 ```
 cd starwars-desafio-b2w
 npm install
