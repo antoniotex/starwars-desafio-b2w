@@ -3,18 +3,25 @@ import ReactDOM from 'react-dom';
 import ModalFilms from '../components/modal-films'
 import { shallow } from 'enzyme'
 
-describe('ModalFilms renders without crashing', () => {
-    it('renders without crashing', () => {
-      const div = document.createElement('div')
-      ReactDOM.render(<ModalFilms />, div)
-      ReactDOM.unmountComponentAtNode(div)
-    });
-  })
+describe('<ModalFilms />', () => {
+    const modalProps = {
+        featuredFilms: [],
+        showModalFilms: false,
+        handleCloseModal: () => {},
+        loadingModal: false
+    }
+    const component = shallow(<ModalFilms { ...modalProps } />)
+    // console.log('Resultado: ', component.props().children)
 
-  describe('ModalFilms renders without crashing', () => {
     it('renders without crashing', () => {
-        const component = shallow(<ModalFilms />)
-        console.log(component)
         expect(component).toHaveLength(1)
     });
-  })
+
+    it('should be content label text Featured Films List', () => {
+        expect(component.props().contentLabel).toEqual('Featured Films List')
+    })
+
+    // it('prop index should be number', () => {
+    //     expect(component.find('p').prop(key)).toEqual(1)
+    // })
+})

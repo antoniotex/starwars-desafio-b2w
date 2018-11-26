@@ -59,6 +59,10 @@ class App extends Component {
   }
 
   getFilms(){
+    debugger
+    if(!this.state.planetInfo.films.length){
+      return
+    }
     this.handleOpenModalFilms()
     this.setState({
       featuredFilms: [],

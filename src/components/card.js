@@ -21,7 +21,8 @@ const Card = ({ planetInfo, getFilms }) => (
                 className={ `${planetInfo.films.length > 0 ? 'hvr-pulse' : 'none'}` } 
                 onClick={ getFilms }>
                     Featured in { planetInfo.films.length } { planetInfo.films.length === 1 ? 'film' : 'films' }
-                </p> }
+                </p> 
+                }
             </div>
         </div> }
     </div>

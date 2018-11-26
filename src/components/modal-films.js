@@ -15,7 +15,7 @@ const ModalFilms = ({ featuredFilms, showModalFilms, handleCloseModal, loadingMo
                 <p key={ index } >{ film.title }, { film.release_date.slice(0, 4) }</p>
             )) }
         </div> }
-        <div className='close' ><p onClick={ handleCloseModal } >&times;</p></div>                     
+        <div className='close' ><p onClick={ handleCloseModal } >&times;</p></div>     
     </Modal>
 )
 
