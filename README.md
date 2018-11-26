@@ -1,7 +1,5 @@
 <h1 align='center'>Desafio Frontend B2W Digital</h1>
 
-## Índice
-
 ## Descrição do Projeto
 Desafio para a vaga de Desenvolvedor Frontend na [B2W Digital](https://ri.b2w.digital/). O desafio consistia em desenvolver uma aplicação que pegue aleatoriamente um planeta da franquia Star Wars e mostre informações do mesmo como População, Clima e Tipo de Terreno. Junto a essas informações, a aplicação também deve informar em quantos filmes da franquia houve aparições daquele planeta.
 
@@ -23,6 +21,7 @@ Os demais participantes devem adivinhar qual é o diâmetro, população, clima,
     + [The Star Wars API](https://swapi.co/)
 
 ## Executar o projeto
+### Local
 Para executar o projeto em modo de desenvolvimento, você deverá ter a última versão estável do [Node.js](https://nodejs.org/en/download/) instalado em sua máquina.
 
 Clone o repositório digitando no seu terminal
@@ -43,6 +42,10 @@ npm start
 Acesse o endereço abaixo no seu navegador para visualizar
 ```
 http://localhost:3000/
+```
+### Na internet
+```
+https://desafio-star-wars.firebaseapp.com/
 ```
 
 
