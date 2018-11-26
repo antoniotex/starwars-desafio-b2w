@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Button = ({ nextPlanet }) => (
-    <button className='btn fourth' onClick={ nextPlanet } >Next</button>
+    <button className='btn next-button' onClick={ nextPlanet } >Next</button>
 )
 
 Button.propTypes = {

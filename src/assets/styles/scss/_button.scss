@@ -1,6 +1,5 @@
 @import 'variables';
 
-// Basic Button Style
 .btn {
     box-sizing: border-box;
     appearance: none;
@@ -31,8 +30,7 @@
     }
   }
   
-  .fourth {
-    // background: $yellow;
+  .next-button {
     border-color: $yellow;
     color: #fff;
     background: {
