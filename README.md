@@ -1,7 +1,7 @@
 <h1 align='center'>Desafio Frontend B2W Digital</h1>
 
 ## Descrição do Projeto
-Desafio para a vaga de Desenvolvedor Frontend na [B2W Digital](https://ri.b2w.digital/). O desafio consistia em desenvolver uma aplicação que pegue aleatoriamente um planeta da franquia Star Wars e mostre informações do mesmo como População, Clima e Tipo de Terreno. Junto a essas informações, a aplicação também deve informar em quantos filmes da franquia houve aparições daquele planeta.
+O desafio consistia em desenvolver uma aplicação que pegue aleatoriamente um planeta da franquia Star Wars e mostre informações do mesmo como População, Clima e Tipo de Terreno. Junto a essas informações, a aplicação também deve informar em quantos filmes da franquia houve aparições daquele planeta.
 
 ## Instruções
 O apresentador do jogo clica no botão Next e informa qual é o planeta da vez.
@@ -31,7 +31,7 @@ git clone https://github.com/antoniotex/starwars-desafio-b2w.git
 
 Após terminar o download, acesse a pasta e instale as depêndencias
 ```
-cd starwars-desafio-b2w
+cd starwars-random
 npm install
 ```
 
